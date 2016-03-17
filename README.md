@@ -95,4 +95,4 @@ ok: created action github-language
 [ow]: https://developer.ibm.com/openwhisk/
 [wp]: https://webpack.github.io/
 [owgs]: https://github.com/openwhisk/openwhisk/blob/master/README.md
-[blog]: http://developer.ibm.com/openwhisk/2016/03/16/bundling-openwhisk-actions-with-webpack/
+[blog]: https://developer.ibm.com/openwhisk/2016/03/17/bundling-openwhisk-actions-with-webpack/
