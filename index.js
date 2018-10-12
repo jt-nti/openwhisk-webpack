@@ -14,16 +14,11 @@
 // limitations under the License.
 //-------------------------------------------------------------------------------
 
-import { getUserRepos, getRepoLanguages } from './githubApi';
-import Promise from 'bluebird';
+import leftPad from 'left-pad';
 
-global.main = ({ user }) => {
-  getUserRepos(user).then(repos =>
-    Promise.map(repos, ({ name }) => getRepoLanguages(user, name))
-  ).then(languageArr =>
-    whisk.done({ languageArr })
-  ).catch(e =>
-    whisk.done(e)
-  );
-  return whisk.async();
-};
+function leftPadAction(args) {
+    const lines = args.lines || [];
+    return { padded: lines.map(l => leftPad(l, 30, ".")) }
+}
+
+exports.main = leftPadAction;
